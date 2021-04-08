@@ -83,7 +83,7 @@ while True:
             a[value] += 1
     print(a)
     count+=1
-    if a[2] <= 0 and a[3] <= 0 and a[4] == 0 and a[5]==0:
+    if a[2] == 3 and a[3] <= 0 and a[4] == 0 and a[5]==0:
         break
 
 print('-'*30)
@@ -93,6 +93,19 @@ a22=sorted(hr22+lr23)
 
 if a22==list(range(1,46)):
     print('대상 True')
+
+#중복 번호 리스트
+overlap=[]
+for key,value in d1.items():
+    if value>=2:
+        overlap.append(key)
+
+a1_overlap=len(list(set(a1).intersection(overlap)))
+a2_overlap=len(list(set(a2).intersection(overlap)))
+a3_overlap=len(list(set(a3).intersection(overlap)))
+a4_overlap=len(list(set(a4).intersection(overlap)))
+a5_overlap=len(list(set(a5).intersection(overlap)))
+
 
 print('-'*30)
 print(f'돌린 횟수: {count}')
@@ -104,4 +117,9 @@ for i in range(5):
         b[i] += a[i]
         print(f'{i}번 나온 숫자가 총 {a[i]}개')
 print('-'*30)
-print(f'#1 {a1}',f'#2 {a2}',f'#3 {a3}',f'#4 {a4}',f'#5 {a5}',sep='\n')
+print(f'중복 숫자: {overlap}')
+print('-'*30)
+print('1회 모델')
+print('-'*30)
+print(f'#1 {a1},{a1_overlap}',f'#2 {a2},{a2_overlap}',f'#3 {a3},{a3_overlap}' \
+      ,f'#4 {a4},{a4_overlap}',f'#5 {a5},{a5_overlap}',sep='\n')
