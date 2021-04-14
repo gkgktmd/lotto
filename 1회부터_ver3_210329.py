@@ -84,7 +84,7 @@ while True:
             a[value] += 1
     print(a)
     count+=1
-    if a[2] == 3 and a[3] <= 0 and a[4] == 0 and a[5]==0:
+    if a[2] == 2 and a[3] <= 0 and a[4] == 0 and a[5]==0:
         break
 
 print('-'*30)
